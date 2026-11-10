@@ -143,3 +143,34 @@ footer {
     font-size: 32px;
   }
 }
+
+/* ---------- Added for the new content ---------- */
+.subtitle {
+  margin-top: 10px;
+  font-size: 15px;
+  color: #dbe4f3;
+}
+
+.card p + p {
+  margin-top: 8px;
+}
+
+.skill-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.skill-list li {
+  background-color: #e8eefa;
+  color: #0f2342;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.interests {
+  margin-top: 10px;
+}
