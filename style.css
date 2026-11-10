@@ -32,9 +32,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 14px 20px;
+  margin: 0;
+  padding: 14px 40px;
 }
 
 .logo {
@@ -103,9 +102,13 @@ nav a:hover {
 
 /* ---------- Main sections ---------- */
 main {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 20px;
+  max-width: 900px;
+  margin: 0;
+  padding: 20px 40px;
+}
+
+main p + p {
+  margin-top: 10px;
 }
 
 main section {
