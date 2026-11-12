@@ -215,3 +215,48 @@ footer {
 .interests {
   margin-top: 10px;
 }
+
+/* ---------- Stats strip ---------- */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 24px 0;
+}
+
+.stat {
+  flex: 1 1 160px;
+  background-color: #0f2342;
+  color: #ffffff;
+  padding: 16px 24px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  font-size: 28px;
+  color: #ffb703;
+}
+
+.stat span {
+  font-size: 14px;
+  color: #dbe4f3;
+}
+
+/* ---------- Button ---------- */
+.btn {
+  display: inline-block;
+  background-color: #ffb703;
+  color: #0f2342;
+  padding: 10px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
