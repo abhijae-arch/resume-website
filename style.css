@@ -32,7 +32,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 14px 40px;
 }
 
@@ -102,8 +103,8 @@ nav a:hover {
 
 /* ---------- Main sections ---------- */
 main {
-  max-width: 900px;
-  margin: 0;
+  max-width: 1200px;
+  margin: 0 auto;
   padding: 20px 40px;
 }
 
@@ -259,4 +260,74 @@ footer {
 .btn:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ---------- Card grid ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 16px;
+}
+
+.card-grid .card {
+  margin-bottom: 0;
+}
+
+/* ---------- About layout ---------- */
+.about-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.quick-facts ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.quick-facts li {
+  padding: 8px 0;
+  border-bottom: 1px solid #e3e8f0;
+  font-size: 15px;
+}
+
+.quick-facts li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 800px) {
+  .about-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ---------- Name moves to the corner on scroll ---------- */
+@keyframes name-away {
+  to {
+    transform: translate(-38vw, 220px) scale(0.25);
+    opacity: 0;
+  }
+}
+
+@keyframes logo-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@supports (animation-timeline: scroll()) {
+
+  #hero h1 {
+    animation: name-away linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0 450px;
+  }
+
+  .logo {
+    opacity: 0;
+    animation: logo-in linear both;
+    animation-timeline: scroll(root);
+    animation-range: 250px 450px;
+  }
+
 }
