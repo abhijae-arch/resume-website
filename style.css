@@ -331,3 +331,8 @@ footer {
   }
 
 }
+
+/* Space between the two buttons */
+.btn + .btn {
+  margin-left: 12px;
+}
